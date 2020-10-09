@@ -1,0 +1,51 @@
+//RPC的接口标准使用了IDL（Interface Description Language接口描述语言）语言标准描述
+//相应微软的编译器是MIDL，通过IDL文件来定义RPC客户端与服务器之间的通信接口，只有通过这些接口客户端才能访问服务器。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+//关于uuid:
+//UUID是通用唯一识别码（Universally Unique Identifier）的缩写,是一种软件建构的标准，
+//UUID 的目的是让分布式系统中的所有元素，都能有唯一的辨识资讯，而不需要透过中央控制端来做辨识资讯的指定。
+//如此一来，每个人都可以建立不与其它人冲突的 UUID。在这样的情况下，就不需考虑数据库建立时的名称重复问题。
+//1.UUID在线生成网站：https://1024tools.com/uuid
+//2.或者通过代码自己生成
+[
+uuid(296bd6eb-2ca9-4321-875f-5f4cfc10ecbe),
+version(1.0)
+]
+
+
+//注意： 1)hello.idl文件与hello.acf文件中的接口名称（INTERFACENAME）应一致，否则接下来编译的时候会报错。
+//2)hello.idl文件与hello.acf文件应放在同一目录下。
+interface INTERFACENAME
+{
+	typedef struct PERSON
+	{
+		int code;  
+		[string] char name[100]; 
+		[string] char note[1024]; 
+
+	}PERSON;
+	//typedef [ptr] PERSON* PEOPLE;
+	//typedef [ptr] PERSON** PPEOPLE;
+	int HelloProc(PERSON p);
+	void ShutDown(void);
+}
+
+
+
+
+//ACF文件可以使用户定义自己的客户端或服务端的RPC接口。
+//例如，如果你的客户端程序包含了一个复杂的数据结构，此数据结构只在本地机上有意义，
+//那么你就可以在ACF文件中指定如何描述独立于机器的数据结构，使用数据结构用于远程过程调用。
+//在ACF文件中定义一个handle类型，用来代表客户端与服务端的连接。[implicit_handle]属性允许客户端程序为它的远程过程调用选择一个服务端。
+//ACF定义了此句柄为handle_t类型(MIDL基本数据类型)。MIDL编译器将绑定ACF文件指定的句柄名字hello_IfHandle，放在生成的头文件hello_h.h中。
+
+
+
+//项目的生成目录下有了hello_h.h, hello_c.c, hello_s.c三个文件。
+//其中，hello_h.h文件是客户端和服务器端程序共同要用到的,
+//hello_c.c是客户端程序需要的,
+//hello_s.c是服务器程序所需要的。

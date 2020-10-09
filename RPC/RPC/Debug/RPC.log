@@ -1,0 +1,39 @@
+﻿生成启动时间为 2020/10/2 11:33:41。
+     1>项目“C:\Users\ASUS_\Desktop\RPC_Advanced Operating System\RPC\RPC\RPC.vcxproj”在节点 2 上(Midl 个目标)。
+     1>Midl:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\midl.exe /W1 /nologo /char signed /env win32 /h "hello_h.h" /tlb "Debug\RPC.tlb" hello.idl 
+         Processing .\hello.idl
+         hello.idl
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\oaidl.idl
+         oaidl.idl
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\objidl.idl
+         objidl.idl
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\unknwn.idl
+         unknwn.idl
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\wtypes.idl
+         wtypes.idl
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\basetsd.h
+         basetsd.h
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\guiddef.h
+         guiddef.h
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\ocidl.idl
+         ocidl.idl
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\oleidl.idl
+         oleidl.idl
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\servprov.idl
+         servprov.idl
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\urlmon.idl
+         urlmon.idl
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\msxml.idl
+         msxml.idl
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\oaidl.acf
+         oaidl.acf
+         Processing c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\ocidl.acf
+         ocidl.acf
+         Processing .\hello.acf
+         hello.acf
+     1>已完成生成项目“C:\Users\ASUS_\Desktop\RPC_Advanced Operating System\RPC\RPC\RPC.vcxproj”(Midl 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.06
